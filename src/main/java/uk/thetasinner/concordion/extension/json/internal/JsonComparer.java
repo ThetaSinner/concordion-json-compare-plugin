@@ -52,7 +52,7 @@ public class JsonComparer {
 
   public List<String> getJsonDiffLines()
   {
-    return Collections.unmodifiableList(jsonDiffLines);
+    return jsonDiffLines;
   }
 
   private void compareJsonObjects(JSONObject expected, JSONObject actual, String keyPath) {

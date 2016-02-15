@@ -67,6 +67,9 @@ public class JsonAssertResultRenderer extends AssertResultRenderer {
     for (final String jsonDiffLine : jsonDiffLines) {
       addDiffLine(jsonDiffWrapper, jsonDiffLine);
     }
+
+    // Clear out the diff lines for this comparison.
+    jsonDiffLines.clear();
   }
 
   private void addDiffLine(Element jsonDiffWrapper, String jsonDiffLine) {

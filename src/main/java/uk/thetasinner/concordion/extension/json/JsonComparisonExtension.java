@@ -34,10 +34,10 @@ public class JsonComparisonExtension implements ConcordionExtension {
   public static final String JSON_COMPARISON_XML_NAMESPACE_URI = "http://uk.thetasinner/JsonComparisonExtension";
   public static final String CONCORDION_JSON_EXTENSION_COMMAND = "assertSimilar";
 
+  private final JsonAssertCommand assertCommand = new JsonAssertCommand();;
+
   @Override
   public void addTo(ConcordionExtender concordionExtender) {
-    JsonAssertCommand assertCommand = new JsonAssertCommand();
-
     // The renderer needs the diff lines from the comparer.
     JsonAssertResultRenderer resultRenderer = new JsonAssertResultRenderer();
     resultRenderer.setJsonComparer(assertCommand.getJsonComparer());
